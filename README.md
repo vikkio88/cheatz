@@ -2,14 +2,18 @@
 a small and dependecy free js library to hide easter eggs on your website.
 You can use it to hide secret cheatcodes and it also includes a small utility to echo keys.
 
-[ExampleWebsite]()
+[Example Website](https://cheatz.surge.sh/)
 
-
-## Examples
+## How to
+Include this on top of your html
+```html
+<script src="https://raw.githubusercontent.com/vikkio88/cheatz/main/src/index.js"></script>
+```
+Then you can set the Cheat Codes like so:
 **Cheatz**
 ```js
 addEventListener("DOMContentLoaded", () => {
-// Konami code
+    // Konami code
 new Cheatz("body", "UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT A B", function () { /* DO SOMETHING */});
 });
 
@@ -48,5 +52,8 @@ const keyMaps = {
 This will listen to every key press and echo them at the bottom right of the page.
 
 <img src="https://github.com/vikkio88/kiffari/assets/248805/74deb376-c1ba-4009-846f-89326bd147ae" />
+
+## TODO
+ - [ ] Clean and make it `umd`/`cjs`/`mjs` lib compatible. 
 
 
