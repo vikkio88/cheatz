@@ -7,7 +7,8 @@ const keyMaps = {
     "TAB": "Tab",
     "CTRL": "Control",
     "ALT": "Alt",
-    "SUPER": "Meta"
+    "SUPER": "Meta",
+    "SPACE": " ",
 };
 
 class Cheatz {
@@ -59,7 +60,8 @@ const labelMap = {
     "ArrowRight": "➡️",
     "Enter": "↩️",
     "Control": "Ctrl",
-    "Shift": "🔼"
+    "Shift": "🔼",
+    " ": "Space",
 };
 
 let KeyechoCss = `
