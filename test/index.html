@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Testin Cheatz</title>
+    <script src="cheatz.js" > </script>
+    <script>
+        let keyEcho = null;
+        addEventListener("DOMContentLoaded", () => {
+            keyEcho = new Keyecho("body");
+
+            new Cheatz("body", "i d d q d", function () {
+                document.querySelector("h1").innerHTML = "You're a God (mode)!";
+                placeImage("https://images2.imgbox.com/6d/ee/E7hRJL3l_o.png");
+                showReset();
+            });
+            new Cheatz("body", "i d k f a", function () {
+                document.querySelector("h1").innerHTML = "You've got loads of weapons!";
+                placeImage("https://images2.imgbox.com/59/52/li96U4uF_o.png");
+                showReset();
+            });
+
+            new Cheatz("body", "UP DOWN UP DOWN", function () {
+                document.querySelector("h1").innerHTML = "Eh Up and down!!!";
+                const vengaImg = placeImage("https://i.scdn.co/image/ab67616d0000b273a7df4f2069acae74ace7f10a");
+                vengaImg.setAttribute("style", "width: 300px;");
+                showReset();
+            });
+
+            new Cheatz("body", "UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT A B", function () {
+                document.querySelector("h1").innerHTML = "Konami code eh?";
+                const ctrlImg = placeImage("https://media.npr.org/assets/img/2020/02/26/16614268938_40ffabe1d0_k-cf680690f2107d8508d12017927cd6ae6785a4bb.jpg");
+                ctrlImg.setAttribute("style", "width: 300px");
+                showReset();
+            });
+        });
+
+        function placeImage(url) {
+            removeAllImages();
+            const newImg = document.createElement("img");
+            newImg.setAttribute("src", url);
+
+            document.querySelector("body").appendChild(newImg);
+
+            return newImg;
+        }
+
+        function hideReset() {
+            const btn = document.querySelector("button");
+            if (Boolean(btn)) {
+                btn.style.display = "none";
+            }
+
+        }
+        function showReset() {
+            const btn = document.querySelector("button");
+            if (Boolean(btn)) {
+                btn.style.display = "block";
+            }
+        }
+
+        function removeAllImages() {
+            const imgs = document.querySelectorAll("img");
+            for (const i of imgs) {
+                i.parentNode.removeChild(i);
+            }
+        }
+
+        function reset() {
+            hideReset();
+            document.querySelector("h1").innerHTML = "Totally normal page.";
+            removeAllImages();
+        }
+
+        function toggleEcho() {
+            keyEcho.toggle();
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #474A48;
+            color: #9AE19D;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        h1 {
+            margin-top: 6rem;
+            font-size: 3rem;
+        }
+
+        button {
+            display: none;
+            margin: 5rem;
+            background-color: #2C302E;
+            border: solid 1px #9AE19D;
+            color: #9AE19D;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            cursor: pointer;
+            border-color: #537A5A;
+            color: #2C302E;
+            background-color: #909590;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        input[type='checkbox'] {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🎮 Cheatz Testing 🎮</h2>
+    <form>
+        <label for="echo">Toggle KeyEcho</label>
+        <input type="checkbox" name="echo" checked="true" onchange="toggleEcho()" />
+    </form>
+
+    <h1>Totally normal page.</h1>
+    <button onclick="reset()">Reset</button>
+</body>
+
+</html>

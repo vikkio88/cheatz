@@ -1,0 +1,20 @@
+{
+  "name": "cheatz",
+  "version": "0.0.1",
+  "description": "a small js library to hide easter eggs on your website.",
+  "main": "src/index.js",
+  "keywords": [
+    "konamicode",
+    "cheat codes",
+    "easter egg"
+  ],
+  "author": "Vincenzo Ciaccio <vincenzo.ciaccio@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikkio88/cheatz.git"
+  },
+  "scripts": {
+    "deploy:example": "cp src/index.js test/cheatz.js && surge test/ --domain cheatz.surge.sh"
+  }
+}
