@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎮 Testin Cheatz</title>
-    <script src="cheatz.js"> </script>
-    <script>
+    <script type="module">
+        import Cheatz from './Cheatz.js';
+        import Keyecho from './Keyecho.js';
+
         let keyEcho = null;
         addEventListener("DOMContentLoaded", () => {
             keyEcho = new Keyecho("body");
@@ -77,6 +79,9 @@
         function toggleEcho() {
             keyEcho.toggle();
         }
+
+        window.toggleEcho = toggleEcho;
+        window.reset = reset;
     </script>
     <style>
         body {

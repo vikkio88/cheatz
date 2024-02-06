@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "a small js library to hide easter eggs on your website.",
   "main": "src/index.js",
+  "type": "module",
   "keywords": [
     "konamicode",
     "cheat codes",
@@ -15,6 +16,7 @@
     "url": "https://github.com/vikkio88/cheatz.git"
   },
   "scripts": {
-    "deploy:example": "cp src/index.js test/cheatz.js && surge test/ --domain cheatz.surge.sh"
+    "build:dev": "cp src/Cheatz.js src/Keyecho.js test/",
+    "deploy:example": "npm run build dev && surge test/ --domain cheatz.surge.sh"
   }
 }
