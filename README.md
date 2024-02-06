@@ -5,9 +5,20 @@ You can use it to hide secret cheatcodes and it also includes a small utility to
 [Example Website](https://cheatz.surge.sh/)
 
 ## How to
-Include this on top of your html
+```
+npm install cheatz
+```
+then either use the `dist/` files or the `src` files like so:
 ```html
-<script src="https://raw.githubusercontent.com/vikkio88/cheatz/main/src/index.js"></script>
+<script type="module">
+        import Cheatz from './Cheatz.js';
+        import Keyecho from './Keyecho.js';
+
+        let keyEcho = null;
+        addEventListener("DOMContentLoaded", () => {
+            keyEcho = new Keyecho("body");
+
+            new Cheatz("body", "i d d q d", function () {
 ```
 Then you can set the Cheat Codes like so:
 **Cheatz**
@@ -52,8 +63,3 @@ const keyMaps = {
 This will listen to every key press and echo them at the bottom right of the page.
 
 <img src="https://github.com/vikkio88/kiffari/assets/248805/74deb376-c1ba-4009-846f-89326bd147ae" />
-
-## TODO
- - [ ] Clean and make it `umd`/`cjs`/`mjs` lib compatible. 
-
-

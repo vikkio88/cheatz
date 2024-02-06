@@ -37,7 +37,7 @@ let KeyechoCss = `
 }
 `;
 
-export default class Keyecho {
+class Keyecho {
     #isOn = true;
     #labels = {};
     constructor(mountPoint, additionalLabels = {}, style = null) {
@@ -69,3 +69,5 @@ export default class Keyecho {
         this.#isOn = !this.#isOn;
     }
 }
+
+export default Keyecho;

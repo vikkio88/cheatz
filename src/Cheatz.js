@@ -11,7 +11,7 @@ const keyMaps = {
     "SPACE": " ",
 };
 
-export default class Cheatz {
+class Cheatz {
     #sequence = '';
     #pointer = 0;
     constructor(mountPoint, sequence, callback, additionalMap = {}) {
@@ -52,3 +52,5 @@ export default class Cheatz {
         this.#sequence = parsedSequence;
     }
 }
+
+export default Cheatz;
