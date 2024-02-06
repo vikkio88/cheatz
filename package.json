@@ -1,6 +1,6 @@
 {
   "name": "cheatz",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a small js library to hide easter eggs on your website.",
   "main": "src/index.js",
   "type": "module",
