@@ -18,7 +18,7 @@
   "scripts": {
     "build:cjs": "rm -rf dist && mkdir dist && head -n -1 src/Cheatz.js > dist/cheatz.js && head -n -1 src/Keyecho.js > dist/keyecho.js",
     "build:dev": "rm -rf test/module/*.js && rm -rf test/cjs/*.js && cp src/*.js test/module && npm run build:cjs && cp dist/*.js test/cjs/",
-    "deploy:example": "npm run build dev && surge test/module/ --domain cheatz.surge.sh",
-    "prepublish": "npm build:cjs"
+    "deploy:example": "npm run build:dev && surge test/cjs/ --domain cheatz.surge.sh",
+    "prepublish": "npm run build:cjs"
   }
 }

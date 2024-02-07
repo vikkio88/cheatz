@@ -8,7 +8,8 @@ You can use it to hide secret cheatcodes and it also includes a small utility to
 ```
 npm install cheatz
 ```
-then either use the `dist/` files or the `src` files like so:
+
+then either use the `dist/` files as `cjs` or the `src` files in `type="module"` like so:
 ```html
 <script type="module">
         import Cheatz from './Cheatz.js';
@@ -19,6 +20,12 @@ then either use the `dist/` files or the `src` files like so:
             keyEcho = new Keyecho("body");
 
             new Cheatz("body", "i d d q d", function () {
+```
+
+alternatively you can use the statically hosted lib on surge including it like so:
+```html
+<script src="https://cheatz.surge.sh/cheatz.js"></script>
+<script src="https://cheatz.surge.sh/keyecho.js"></script>
 ```
 Then you can set the Cheat Codes like so:
 **Cheatz**
